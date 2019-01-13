@@ -29,11 +29,7 @@ fi
 sed -i "s/^ADDRESS_SERVER_QCM=.*$/ADDRESS_SERVER_QCM=\"$GLOBAL_IP\"/g" /srv/rt0704/configuration
 sed -i "s/^ADDRESS_SERVER_CORRECTOR=.*$/ADDRESS_SERVER_CORRECTOR=\"$GLOBAL_IP\"/g" /srv/rt0704/configuration
 
-#cat /srv/rt0704/configuration
 source /srv/rt0704/configuration
-#echo "========================="
-#printenv | sort
-#echo "========================="
 
 python3.7 /srv/rt0704/Corrector-QCM/app.py &
 python3.7 /srv/rt0704/Authentication-QCM/app.py &
